@@ -1,0 +1,349 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of Component <Canvas/> <Canvas/> must be rendered correctly 1`] = `
+<div
+  className="canvas__main-content"
+>
+  <div
+    className="mt-5"
+  >
+    <b>
+      Name:
+    </b>
+     
+  </div>
+  <div
+    className="mt-1"
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <div>
+      <canvas
+        className="canvas__canvas"
+      />
+      <img
+        alt=""
+        onLoad={[Function]}
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "marginLeft": "10px",
+        }
+      }
+    >
+      <div
+        className="mt-1"
+      >
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-solid fa-up-long"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+      </div>
+      <div
+        className="mt-1"
+      >
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-solid fa-left-long"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-regular fa-circle-xmark"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-solid fa-right-long"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+      </div>
+      <div
+        className="mt-1"
+      >
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-solid fa-down-long"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+      </div>
+      <div
+        className="mt-5"
+      >
+        <b>
+          Zoom:
+        </b>
+         
+      </div>
+      <div
+        className="mt-1"
+      >
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          +
+        </button>
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          -
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-1"
+  >
+    <button
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      Clear Canvas
+    </button>
+    <button
+      className="btn btn-secondary ml-5"
+      onClick={[Function]}
+    >
+      <i
+        className="fa-regular fa-floppy-disk"
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      />
+       Save image
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Test of Component <Canvas/> button for clearing canvas dispatches imageClear action 1`] = `
+<div
+  className="canvas__main-content"
+>
+  <div
+    className="mt-5"
+  >
+    <b>
+      Name:
+    </b>
+     
+  </div>
+  <div
+    className="mt-1"
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <div>
+      <canvas
+        className="canvas__canvas"
+      />
+      <img
+        alt=""
+        onLoad={[Function]}
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "marginLeft": "10px",
+        }
+      }
+    >
+      <div
+        className="mt-1"
+      >
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-solid fa-up-long"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+      </div>
+      <div
+        className="mt-1"
+      >
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-solid fa-left-long"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-regular fa-circle-xmark"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-solid fa-right-long"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+      </div>
+      <div
+        className="mt-1"
+      >
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          <i
+            className="fa-solid fa-down-long"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          />
+        </button>
+      </div>
+      <div
+        className="mt-5"
+      >
+        <b>
+          Zoom:
+        </b>
+         
+      </div>
+      <div
+        className="mt-1"
+      >
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          +
+        </button>
+        <button
+          className="btn btn-scroll"
+          onClick={[Function]}
+        >
+          -
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-1"
+  >
+    <button
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      Clear Canvas
+    </button>
+    <button
+      className="btn btn-secondary ml-5"
+      onClick={[Function]}
+    >
+      <i
+        className="fa-regular fa-floppy-disk"
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      />
+       Save image
+    </button>
+  </div>
+</div>
+`;

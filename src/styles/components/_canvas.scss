@@ -1,0 +1,8 @@
+.canvas__main-content{
+  display: flex;
+  flex-direction: column; 
+  text-align: center;
+}
+.canvas__canvas{
+  border: 2px solid $navbar-background;
+}

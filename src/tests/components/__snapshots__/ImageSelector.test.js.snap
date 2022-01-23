@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of Component <ImageSelector/> <ImageSelector/> must be rendered correctly 1`] = `
+<div
+  className="imageSelector__main-content"
+>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    Select an image
+  </button>
+  <button
+    className="btn btn-primary ml-5"
+    onClick={[Function]}
+  >
+    Load image from localStorage
+  </button>
+  <input
+    id="fileSelector"
+    name="myFileSelector"
+    onChange={[Function]}
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="file"
+  />
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of Component <NotImage/> <NotImage/> must be rendered correctly 1`] = `
+<div
+  style={
+    Object {
+      "color": "white",
+      "display": "flex",
+      "justifyContent": "center",
+      "marginTop": "200px",
+    }
+  }
+>
+  <p>
+    You must load an image to be showed in canvas
+  </p>
+</div>
+`;

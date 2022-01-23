@@ -1,0 +1,63 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 7px 10px 7px 10px;
+
+  transition: color .3s ease;
+
+  &:focus {
+      outline: none;
+  }
+
+  &:hover {
+      color: darken($color: white, $amount: 10);
+  }
+  
+}
+
+.btn-primary {
+  background-color: $btn-primary; 
+  
+  &:disabled {
+      background-color: lighten($color: $btn-primary, $amount: 15);
+  }
+
+  &:hover { 
+      background-color: darken($color: $btn-primary, $amount: 15);
+  }
+}
+
+.btn-secondary {
+  background-color: $btn-secondary; 
+  width: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+  &:disabled {
+      background-color: lighten($color: $btn-primary, $amount: 15);
+  }
+
+  &:hover { 
+      background-color: darken($color: $btn-primary, $amount: 15);
+  }
+}
+
+.btn-scroll {
+  background-color: $btn-scroll;  
+  width: 40px;
+
+  margin-left: 5px;
+  margin-right: 5px;
+  
+  &:disabled {
+      background-color: lighten($color: $btn-scroll, $amount: 15);
+  }
+
+  &:hover { 
+      background-color: darken($color: $btn-scroll, $amount: 15);
+  }
+}
