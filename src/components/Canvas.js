@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { imageClear } from '../actions/image';
 import { constants } from '../helpers/contants';
 import { getNewCoords } from '../helpers/utils';
+import { useCallback } from 'react';
 
 export const Canvas = ( { width:canvasWidth, height:canvasHeight, imageBase64, imageName, coordX, coordY, scale }) => {
 
@@ -109,7 +110,7 @@ export const Canvas = ( { width:canvasWidth, height:canvasHeight, imageBase64, i
   }
 
   // saves image data into Localstorage
-  const handleSubmit = async() => {
+  const handleSubmit = useCallback(async() => {
 
     // control of decimal numbers to avoid decimal deviation
     let newScale = imageScale + '';
@@ -134,7 +135,7 @@ export const Canvas = ( { width:canvasWidth, height:canvasHeight, imageBase64, i
       'success'
     )
 
-  }
+    });
 
   // Effect called whenever coords or imageScale changes its value
   // redraws the canvas

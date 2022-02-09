@@ -15,17 +15,38 @@ export const validateFile = ( file ) => {
 }
 
 // returns a Base64 string from a file
-export const getBase64 = ( file, cb ) => {
-  
+export const getBase64 = ( file, cb ) => {  
   let reader = new FileReader();
   reader.readAsDataURL( file );
   reader.onload = function () {
       cb( reader.result )
   };
   reader.onerror = function ( error ) {
-      
+      cb( error );
   };
 }
+
+// returns a Base64 string from a file -async
+export const getBase64Async = ( file ) => {
+  console.log('getBase64Async')
+  
+  return new Promise( ( resolve, reject ) => {
+
+    let reader = new FileReader();
+    reader.onload = () =>{
+      let data = reader.result;
+      resolve( data );
+    }
+    reader.onerror = ( error ) =>{
+      reject( error );
+    }
+
+    reader.readAsDataURL( file );
+   
+  })
+
+}
+
 
 // get new x,y coords 
 export const getNewCoords = ( x, y, canvasWidth, canvasHeight, direction, displaySize ) => {

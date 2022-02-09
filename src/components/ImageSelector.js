@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { memo, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
 import { imageLoad } from '../actions/image';
 import { constants } from '../helpers/contants';
-import { getBase64, validateFile } from '../helpers/utils';
+import { getBase64, getBase64Async, validateFile } from '../helpers/utils';
 
-export const ImageSelector = () => {
+export const ImageSelector = memo (() => {
 
   const dispatch = useDispatch();
+  const fileSelectorRef = useRef(null);
 
   // forces a click into #fileSelector <input> element
   const handleLoadNewImage = () => {
 
-    document.querySelector( '#fileSelector' ).click();
+    fileSelectorRef.current.click();
+    //document.querySelector( '#fileSelector' ).click();
 
   }
 
@@ -33,12 +35,23 @@ export const ImageSelector = () => {
         
     // dispatch into the reducer, this will provoke the render of the Canvas
     // in MainScreen with the new data
+    /*
     getBase64( fileSelected, ( imageBase64 ) => {             
       dispatch( imageLoad( imageBase64, fileSelected.name, 0, 0, 1 ) );            
     });
+    */  
+    getBase64Async( fileSelected )
+                .then( ( imageBase64 ) => {
+                  dispatch( imageLoad( imageBase64, fileSelected.name, 0, 0, 1 ) ); 
+                })
+                .catch( ( err )=> {
+                  console.log('error loading file');
+                })
+
    
     // clear <input> 
-    document.querySelector( '#fileSelector' ).value = '';
+    fileSelectorRef.current.value = '';
+    //document.querySelector( '#fileSelector' ).value = '';
   }
   
   // load the data from LocalStorage
@@ -75,6 +88,7 @@ export const ImageSelector = () => {
       </button>
 
       <input 
+        ref={ fileSelectorRef }
         id='fileSelector'
         name='myFileSelector'
         type='file'
@@ -84,4 +98,5 @@ export const ImageSelector = () => {
 
     </div>
   )
-};
+}
+)
